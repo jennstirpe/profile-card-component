@@ -12,16 +12,17 @@ body {
     width: 100%;
     height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
-    // background-image: url('../images/bg-pattern-top.svg'),
-    // url('../images/bg-pattern-bottom.svg');
-    // background-repeat: no-repeat, no-repeat;
-    // background-position: bottom left, top right;
     background-color: $cyan;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     color: $desaturated-blue;
+}
+
+main {
+    z-index: 1;
 }
 
 
@@ -34,6 +35,8 @@ body {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
 
 .user-img {
@@ -55,7 +58,7 @@ body {
 
 .user-info {
     margin-top: 5rem;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(221, 221, 221);
     padding-bottom: 1.5rem;
     width: 100%;
     text-align: center;
@@ -92,14 +95,28 @@ body {
     }
 
     .stat-name {
-        font-size: .75rem;
+        font-size: .6rem;
         color: $gray;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
 }
 
 
+#background-top {
+    width: 1000px;
+    position: absolute;
+    z-index: 0;
+    bottom: 40%;
+    right: 50%;
+}
 
+#background-bottom {
+    width: 1000px;
+    position: absolute;
+    z-index: 0;
+    top: 40%;
+    left: 50%;
+}
 
 
 
